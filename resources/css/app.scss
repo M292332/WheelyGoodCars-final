@@ -1,0 +1,129 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+// Variables
+$primary:	hsl(28, 100%, 50%);
+$secondary:	hsl(28, 100%, 45%);
+$light:		hsl(30, 23%, 95%);
+$dark:      hsl(28, 10%, 14%);
+$gray:		hsl(28, 10%, 97%);
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Typography
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+.fullheight{
+    min-height: calc(100vh - 56px) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.car-card {
+    background: $light;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba($dark, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.featured-car {
+    transform: scale(1.05);
+    box-shadow: 0 0 24px 0 $primary;
+    border: 2px solid $primary;
+    z-index: 2;
+}
+
+.car-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: $gray;
+}
+
+.car-card-body {
+    padding: 1rem 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .featured-car {
+        transform: none;
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+}
+
+.sticky-progress {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.license-plate-wrapper {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.license-plate-nl {
+    background: #0057b8;
+    color: #fff;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding: 0.45em 0.7em 0.45em 0.7em;
+    border: 2px solid #222;
+    border-right: none;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.license-plate-input {
+    background: #ffe600 !important;
+    border: 2px solid #222;
+    border-radius: 0 6px 6px 0;
+    color: #222;
+    font-family: 'OCR A Std', 'Consolas', 'Courier New', monospace;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    text-align: center;
+    box-shadow: 0 2px 8px #0002;
+    width: 220px;
+    max-width: 100%;
+    height: 48px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    background-clip: padding-box;
+}
+
+.license-plate-input:focus {
+    outline: none;
+    border-color: #0057b8;
+    box-shadow: 0 0 0 3px #0057b833;
+}
+
+.license-plate-input::placeholder {
+    color: #888;
+    opacity: 1;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+}

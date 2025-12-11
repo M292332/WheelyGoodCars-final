@@ -1,0 +1,29 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+# Negeer alle afbeeldingen in storage/app/public/car_photos
+/storage/app/public/car_photos/*
+
+# Maar voeg car1.jpg t/m car5.jpg expliciet toe
+!/storage/app/public/car_photos/car1.jpg
+!/storage/app/public/car_photos/car2.jpg
+!/storage/app/public/car_photos/car3.jpg
+!/storage/app/public/car_photos/car4.jpg
+!/storage/app/public/car_photos/car5.jpg
